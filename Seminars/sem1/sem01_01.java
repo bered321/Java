@@ -74,20 +74,20 @@ import java.util.Scanner;
 //         System.out.println(Arrays.toString(array));
 //     }
 // }
-// public class Main { //второй вариант решения 
-//     public static void main(String[] args) {
-//         int[] arr = new int[]{1,2,3,4,5,4,3,4};
-//         // [1,2,4,5,4,4, 3,4 ]
-//         int count = 0;
+public class sem01_01 { //второй вариант решения 
+    public static void main(String[] args) {
+        int[] arr = new int[]{1,2,3,4,5,4,3,4};
+        // [1,2,4,5,4,4, 3,4 ]
+        int count = 0;
     
-//         for (int i = 0; i < arr.length; i++)
-//             if (arr[i] != 3) {
-//                 arr[count++] = arr[i];
-//             }
-//         System.out.println(Arrays.toString(arr));
-//         while (count < arr.length)
-//             arr[count++] = 3;
-//         System.out.println(Arrays.toString(arr));
-//     }
-// }
+        for (int i = 0; i < arr.length; i++)
+            if (arr[i] != 3) {
+                arr[count++] = arr[i];
+            }
+        System.out.println(Arrays.toString(arr));
+        while (count < arr.length)
+            arr[count++] = 3;
+        System.out.println(Arrays.toString(arr));
+    }
+}
 
