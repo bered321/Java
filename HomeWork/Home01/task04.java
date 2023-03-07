@@ -7,7 +7,6 @@
 
 package HomeWork.Home01;
 
-import java.text.BreakIterator;
 import java.util.Scanner;
 
 public class task04 {
