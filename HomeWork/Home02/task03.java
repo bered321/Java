@@ -13,7 +13,7 @@ import java.util.logging.SimpleFormatter;
 public class task03 {
     public static void log(double num1, double num2, char action, double res) throws IOException {
         Logger logger = Logger.getLogger(task01.class.getName());
-        FileHandler fh = new FileHandler("HomeWork/Home02/log.txt");
+        FileHandler fh = new FileHandler("HomeWork/Home02/log.txt", true);
         logger.addHandler(fh);
         SimpleFormatter sFormat = new SimpleFormatter();
         fh.setFormatter(sFormat);

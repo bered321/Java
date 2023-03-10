@@ -2,6 +2,10 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 //import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.Random;
 
 //import java.util.Arrays;
 // import java.util.Scanner;
@@ -176,21 +180,85 @@ import java.io.IOException;
 //     }
 // }
 
-public class sem01_01 {
-    public static void main(String[] args) {
-        File test = new File("test.txt");
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < 10; i++) {
-            sb.append("test ");
-        }
-        try{
-        FileWriter fr = new FileWriter(test, true);
-        fr.write(sb.toString());
-        fr.close();
-        }
-        catch(IOException e){
-            System.out.println("Error");
-        }
+// public class sem01_01 {
+//     public static void main(String[] args) {
+//         File test = new File("test.txt");
+//         StringBuilder sb = new StringBuilder();
+//         for (int i = 0; i < 10; i++) {
+//             sb.append("test ");
+//         }
+//         try{
+//         FileWriter fr = new FileWriter(test, true);
+//         fr.write(sb.toString());
+//         fr.close();
+//         }
+//         catch(IOException e){
+//             System.out.println("Error");
+//         }
 
-    }
-}
+//     }
+// }
+
+//Заполнить список десятью случайными числами. Отсортировать список методом sort() и вывести его на экран.
+// public class sem01_01 {
+//     public static void main(String[] args) {
+//         ArrayList<Integer> arr = new ArrayList<Integer>();
+//         Random rand = new Random();
+//         for (int i = 0; i < 10; i++) {
+//             int x = rand.nextInt(10);
+//             arr.add(x);
+//         }    
+//         System.out.println(arr);
+//         arr.sort(null);
+//         System.out.println(arr);
+//     }
+// }
+
+// Заполнить список названиями планет Солнечной системы в произвольном порядке с повторениями.
+// Вывести название каждой планеты и количество его повторений в списке.
+
+// public class sem01_01 {
+//     public static void main(String[] args) {
+//         ArrayList<String> arr = new ArrayList<>(Arrays.asList("Sun", "Mercury", "Venus", "Earth", "Mars", "Jupiter",
+//                 "Saturn", "Uranus", "Neptune", "Pluto", "Sun", "Mercury", "Venus", "Earth", "Mars"));
+//         ArrayList<String> arr_2 = new ArrayList<>();
+//         for (int i = 0; i < arr.size(); i++) {
+//             if (!arr_2.contains(arr.get(i))) {
+//                 int count = 0;
+//                 arr_2.add(arr.get(i));
+//                 for (int j = 0; j < arr.size(); j++) {
+//                     if (arr.get(i).equals(arr.get(j))) {
+//                         count += 1;
+//                     }
+//                 }
+//                 System.out.println(arr.get(i)+" "+count);
+//             }
+
+//         }
+//     }
+// }
+
+// Создать список типа ArrayList.
+// Поместить в него как строки, так и целые числа. 
+// Пройти по списку, найти и удалить целые числа.
+// static void ex3(){
+//     ArrayList list = new ArrayList<>();
+//     list.add("asdad5");
+//     list.add("asdad4");
+//     list.add("asdad3");
+//     list.add(22);
+//     list.add(22);
+//     list.add(22);
+//     list.add("asdad2");
+//     list.add("asdad1");
+//     list.add(22);
+
+//     System.out.println(list);
+//     for (int i = list.size()-1; i >= 0; i--) {
+//         if (list.get(i) instanceof Integer){
+//             list.remove(i);
+
+//         }
+//     }
+//     System.out.println(list);
+// }

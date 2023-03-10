@@ -14,6 +14,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+
+
 public class task02 {
     public static String[] ReadLineFromFile(String pathway) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(pathway));
