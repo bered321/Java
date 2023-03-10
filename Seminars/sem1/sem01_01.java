@@ -1,21 +1,7 @@
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-//import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.Random;
 
-//import java.util.Arrays;
-// import java.util.Scanner;
 
 // Написать программу, которая запросит пользователя ввести <Имя> в консоли.
 //  Получит введенную строку и выведет в консоль сообщение “Привет, <Имя>!”
-
-// import java.text.Format;
-// import java.util.Scanner;
-
 // public class sem01_01 {
 //     public static void main(String[] args) {
 //         System.out.printf("Введите имя: ");
