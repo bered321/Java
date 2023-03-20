@@ -1,4 +1,9 @@
-
+// import java.util.Deque;
+// import java.util.HashMap;
+// import java.util.LinkedList;
+// import java.util.Map;
+// import java.util.Scanner;
+// import java.util.Stack;
 
 // Написать программу, которая запросит пользователя ввести <Имя> в консоли.
 //  Получит введенную строку и выведет в консоль сообщение “Привет, <Имя>!”
@@ -247,4 +252,213 @@
 //         }
 //     }
 //     System.out.println(list);
+// }
+
+// 1) Замерьте время, за которое в ArrayList добавятся 10000 элементов.
+// 2) Замерьте время, за которое в LinkedList добавятся 10000 элементов. Сравните с предыдущим.
+
+//import java.util.ArrayList;
+// import java.util.LinkedList;
+
+// public class sem01_01 {
+
+// public static void main(String[] args) {
+// long timeStart_1 = System.currentTimeMillis();
+// ArrayList<Integer> resulList = new ArrayList<>();
+// for (int i = 0; i < 1000000; i++) {
+// resulList.add(i);
+// }
+// long timeFinish_1 = System.currentTimeMillis();
+// long timeStart_2 = System.currentTimeMillis();
+// LinkedList<Integer> listlink = new LinkedList<>();
+// for (int i = 0; i < 1000000; i++) {
+// listlink.add(i);
+// }
+// long timeFinish_2 = System.currentTimeMillis();
+// System.out.printf("The time = %d \n" ,timeFinish_1 - timeStart_1);
+// System.out.printf("The time = %d \n",timeFinish_2 - timeStart_2);
+// }
+// }
+
+//     Реализовать консольное приложение, которое:
+// 1. Принимает от пользователя строку вида
+// text
+// 1. Нужно сохранить text в связный список
+// 2. Если введено print~num, выводит строку из позиции num в связном списке и удаляет её из списка.
+// asd
+// [asd]
+// dfhj
+// [asd, dfhj]
+// xzcv
+// [asd, dfhj, xzcv]
+// print~1
+// Вывод dfhj
+// [asd, xzcv]
+
+// import java.util.Scanner;
+
+// import java.util.LinkedList;
+// import java.util.Scanner;
+
+// import javax.sql.rowset.serial.SQLOutputImpl;
+
+// public class sem01_01 {
+//     public static void main(String[] args) {
+//         Scanner scn = new Scanner(System.in);
+//         LinkedList<String> listLink = new LinkedList<>();
+//         System.out.println("Enter string: ");
+//         String str = scn.nextLine();
+//         while (!str.equals("stop")) {
+//             if (!str.contains("print~")) {
+//                 listLink.add(str);
+//             } else {
+//                 String st = str.substring(3);
+//                 System.out.println(st);
+//                 int index = Integer.parseInt(st);
+//                 System.out.println(listLink.get(index));
+//                 listLink.remove(index);
+//             }
+//             System.out.print(listLink.toString());
+//             System.out.println("Enter new string: ");
+//             str = scn.nextLine();
+//         }
+//         scn.close();
+//     }
+// }
+
+// 1. Принимает от пользователя и “запоминает” строки.
+// 2. Если введено print, выводит строки так, чтобы последняя введенная
+// была первой в списке, а первая - последней.
+// import java.util.Deque;
+// import java.util.LinkedList;
+// import java.util.Scanner;
+
+// public class sem01_01 {
+// public static void main(String[] args) {
+// Scanner scn = new Scanner(System.in);
+// Deque <String> queue = new LinkedList<String>();
+
+// System.out.println("Enter string: ");
+// String str = scn.nextLine();
+// while (! str.contains("print")) {
+// queue.add(str);
+// System.out.print(queue.toString());
+// System.out.println("Enter new string: ");
+// str = scn.nextLine();
+// }
+// while(! queue.isEmpty()) {
+// System.out.println(queue.pollLast());
+// }
+// System.out.print(queue.toString());
+// scn.close();
+// }
+// }
+
+// import java.util.HashMap;
+// import java.util.Map;
+// Создать структуру для хранения Номеров паспортов и Фамилий сотрудников организации.
+// 123456 Иванов
+// 321456 Васильев
+// 234561 Петрова
+// 234432 Иванов
+// 654321 Петрова
+// 345678 Иванов
+// Вывести данные по сотрудникам с фамилией Иванов.
+// public class sem01_01 {
+//     public static void main(String[] args) {
+//         Map<Integer, String> data = new HashMap<>();
+//         data.put(123456, "Иванов");
+//         data.put(321456, "Васильев");
+//         data.put(234561, "Петрова");
+//         data.put(234432, "Иванов");
+//         data.put(654321, "Петрова");
+//         data.put(345678, "Иванов");
+//         for (var element : data.entrySet()) {
+//             System.out.printf("key: %s; value: %s \n", element.getKey(), element.getValue());
+//         }
+
+//         for (var element : data.entrySet()) {
+//             if (element.getValue().equals("Иванов")) {
+//                 System.out.println(element.getKey());
+//             }
+//         }
+//     }
+// }
+
+// Даны 2 строки, написать метод, который вернет true, если эти строки являются изоморфными и false, если нет. Строки изоморфны, если одну букву в первом слове можно заменить на некоторую букву во втором слове, при этом
+// 1. повторяющиеся буквы одного слова меняются на одну и ту же букву с сохранением порядка следования. (Например, add - egg изоморфны)
+// 2. буква может не меняться, а остаться такой же. (Например, note - code)
+// Пример 1:
+// Input: s = "foo", t = "bar"
+// Output: false
+// Пример 2:
+// Input: s = "paper", t = "title"
+// Output: true
+// import java.util.HashMap;
+// import java.util.Map;
+// import java.util.Scanner;
+
+// public class sem01_01 {
+//     static boolean isIsomorpf(String strFirst, String strSecond) {
+//         if (strFirst.length() != strSecond.length()) {
+//             return false;
+//         }
+//         Map<Character, Character> data = new HashMap<>();
+//         for (int i = 0; i < strFirst.length(); i++) {
+//             if (!data.containsKey(strFirst.charAt(i))) {
+//                 data.put(strFirst.charAt(i), strSecond.charAt(i));
+//             } else {
+//                 if (data.get(strFirst.charAt(i)) != strSecond.charAt(i)) {
+//                     return false;
+//                 }
+//             }
+//             return true;
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner scn = new Scanner(System.in);
+//         System.out.println("Enter first word!: ");
+//         String strFist = scn.nextLine();
+//         System.out.println("Enter second word!: ");
+//         String strSecond = scn.nextLine();
+//         if (isIsomorpf(strFist, strSecond)) {
+//         }
+//     }
+// }
+
+// Написать программу, определяющую правильность расстановки скобок в выражении.
+// Пример 1: a+(d*3) - истина
+// Пример 2: [a+(1*3) - ложь
+// Пример 3: [6+(3*3)] - истина
+// public class sem01_01 {
+//     static boolean ex2(String s) {
+//         char[] chars = s.toCharArray();
+//         Stack<Character> stack = new Stack<>();
+//         Map<Character, Character> map = new HashMap<>();
+//         String[] c1 = new String[] { "()", "{}", "[]", "<>" };
+//         for (int i = 0; i < c1.length; i++) {
+//             String a = c1[i];
+//             map.put(a.charAt(1), a.charAt(0));
+//         }
+//         for (int i = 0; i < chars.length; i++) {
+//             if (map.containsValue(chars[i])) {
+//                 stack.push(chars[i]);
+//             }
+//             if (map.containsKey(chars[i])) {
+//                 if (stack.empty() || map.get(chars[i]) != stack.pop()) {
+//                     return false;
+//                 }
+//             }
+//         }
+//         return stack.empty();
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner scn = new Scanner(System.in);
+//         System.out.println("Enter first word!: ");
+//         String str = scn.nextLine();
+//         scn.close();
+//         System.out.println(ex2(str));
+//     }
 // }
