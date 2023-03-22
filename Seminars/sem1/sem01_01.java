@@ -1,3 +1,11 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
 // import java.util.Deque;
 // import java.util.HashMap;
 // import java.util.LinkedList;
@@ -462,3 +470,60 @@
 //         System.out.println(ex2(str));
 //     }
 // }
+
+// 1. Создайте HashSet, заполните его следующими числами: {1, 2, 30000, 2, 4, 5000, 6, 3}. Распечатайте содержимое данного множества.
+// 2. Создайте LinkedHashSet, заполните его следующими числами: {1, 2, 30000, 2, 4, 5000, 6, 3}.  Распечатайте содержимое данного множества.
+// 3. Создайте TreeSet, заполните его следующими числами: {1, 2, 30000, 2, 4, 5000, 6, 3}.  Распечатайте содержимое данного множества.
+
+// public class sem01_01 {
+//     public static void main(String[] args) {
+//         Set<Integer> st = new HashSet<>(Arrays.asList(1, 2, 30000, 2, 4, 5000, 6, 3));
+//         System.out.println(st.add(3));
+//         System.out.println(st.add(30));
+//         System.out.println(st);
+//         Set<Integer> st2 = new LinkedHashSet<>(Arrays.asList(1, 2, 30000, 2, 4, 5000, 6, 3));
+//         System.out.println(st2);
+//         System.out.println(st2.add(3));
+//         System.out.println(st2.add(30));
+//         //Set<Integer> st3 = new TreeSet<>(Arrays.asList(1, 2, 30000, 2, 4, 5000, 6, 3));
+//         Set<Integer> st3 = new TreeSet<>(Comparator.reverseOrder());
+//         st3.add(1);
+//         st3.add(2);
+//         st3.add(300);
+//         st3.addAll(Arrays.asList(1, 2, 30000, 2, 4, 5000, 6, 3));
+//         System.out.println(st3.add(3));
+//         System.out.println(st3.add(30));
+//         System.out.println(st3);
+//     }
+// }
+
+// 1. Напишите метод, который заполнит массив из 100 элементов случайными цифрами от 0 до 100.
+// 2. Создайте метод, в который передайте заполненный выше массив и с помощью Set вычислите процент
+// уникальных значений в данном массиве и верните его в виде числа с плавающей запятой.
+// Для вычисления процента используйте формулу:
+// процент уникальных чисел = количество уникальных чисел * 100 / общее количество чисел в массиве.
+// public class sem01_01 {
+//     private static double percent(ArrayList<Integer> lis) {
+//         Set<Integer> st = new HashSet<>(lis);
+//         return (double) st.size()/lis.size();
+       
+//     }
+//     public static void main(String[] args) {
+//         ArrayList<Integer> lis = new ArrayList<>();
+//         for (int i = 0; i < 130; i++) {
+//             lis.add((int)(Math.random()*((130)+1)));
+//         }
+//         System.out.printf("%.2f %%", percent(lis)*100);
+//     }
+// }
+
+
+// 3. Продумайте структуру класса Кот. Какие поля и методы будут актуальны для приложения, которое является
+// информационной системой ветеринарной клиники
+// Поля:
+// Кличка
+// Возраст
+// Прививка
+// Методы:
+// Кот {} мяукнул {} раз
+// Прививка:
